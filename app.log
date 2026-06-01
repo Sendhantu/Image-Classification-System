@@ -1,0 +1,105 @@
+2026-03-30 07:54:59,535 [INFO] app: Model loaded from 'model.pkl'
+2026-03-30 07:54:59,545 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-30 07:54:59,545 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-30 07:55:04,155 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 07:55:04] "GET / HTTP/1.1" 200 -
+2026-03-30 07:55:04,165 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 07:55:04] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2026-03-30 07:55:04,165 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 07:55:04] "[33mGET /static/css/main.css HTTP/1.1[0m" 404 -
+2026-03-30 07:55:22,909 [WARNING] app: Validation error: Field 'sepal_length' is required.
+2026-03-30 07:55:22,912 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 07:55:22] "POST /predict HTTP/1.1" 200 -
+2026-03-30 08:03:44,834 [INFO] app: Model loaded from 'model.pkl'
+2026-03-30 08:03:44,840 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-30 08:03:44,841 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-30 08:03:46,835 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:03:46] "GET / HTTP/1.1" 200 -
+2026-03-30 08:04:00,065 [INFO] app: Image preprocessed — shape: (1, 12288), file: 'download.jpeg'
+2026-03-30 08:04:00,071 [ERROR] app: Unexpected error during prediction for 'download.jpeg'
+Traceback (most recent call last):
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/app.py", line 128, in predict
+    raw = model.predict(img_array)[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/.venv/lib/python3.11/site-packages/sklearn/ensemble/_forest.py", line 903, in predict
+    proba = self.predict_proba(X)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/.venv/lib/python3.11/site-packages/sklearn/ensemble/_forest.py", line 945, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/.venv/lib/python3.11/site-packages/sklearn/ensemble/_forest.py", line 637, in _validate_X_predict
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2923, in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+  File "/Users/sendhanumapathy/PycharmProjects/SEAI IMAGE CLASSIFICTAION AI MODEL/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2787, in _check_n_features
+    raise ValueError(
+ValueError: X has 12288 features, but RandomForestClassifier is expecting 4 features as input.
+2026-03-30 08:04:00,077 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:04:00] "POST /predict HTTP/1.1" 200 -
+2026-03-30 08:12:13,386 [INFO] app: MobileNetV2 loaded — ready for inference
+2026-03-30 08:12:13,396 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-30 08:12:13,396 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-30 08:12:17,218 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:12:17] "GET / HTTP/1.1" 200 -
+2026-03-30 08:12:29,691 [INFO] app: Preprocessed 'download.jpeg' → shape (1, 224, 224, 3)
+2026-03-30 08:12:31,068 [INFO] app: Prediction: Egyptian Cat (53.8%) | File: 'download.jpeg'
+2026-03-30 08:12:31,069 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:12:31] "POST /predict HTTP/1.1" 200 -
+2026-03-30 08:16:15,335 [INFO] app: MobileNetV2 loaded — ready for inference
+2026-03-30 08:16:15,344 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-30 08:16:15,344 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-30 08:16:18,717 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:16:18] "GET / HTTP/1.1" 200 -
+2026-03-30 08:16:28,073 [INFO] app: Preprocessed 'download.jpeg' → shape (1, 224, 224, 3)
+2026-03-30 08:16:28,652 [INFO] app: Prediction: Egyptian Cat (53.8%) | File: 'download.jpeg'
+2026-03-30 08:16:28,652 [INFO] werkzeug: 127.0.0.1 - - [30/Mar/2026 08:16:28] "POST /predict HTTP/1.1" 200 -
+2026-04-03 08:58:31,297 [INFO] app: MobileNetV2 loaded — ready for inference
+2026-04-03 08:58:31,337 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-03 08:58:31,341 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-04-03 08:58:40,732 [INFO] werkzeug: 127.0.0.1 - - [03/Apr/2026 08:58:40] "GET / HTTP/1.1" 200 -
+2026-04-03 08:58:40,739 [INFO] werkzeug: 127.0.0.1 - - [03/Apr/2026 08:58:40] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2026-04-03 08:58:40,739 [INFO] werkzeug: 127.0.0.1 - - [03/Apr/2026 08:58:40] "[33mGET /static/css/main.css HTTP/1.1[0m" 404 -
+2026-04-03 08:59:00,816 [INFO] app: Preprocessed 'download.jpeg' → shape (1, 224, 224, 3)
+2026-04-03 08:59:01,394 [INFO] app: Prediction: Egyptian Cat (53.8%) | File: 'download.jpeg'
+2026-04-03 08:59:01,395 [INFO] werkzeug: 127.0.0.1 - - [03/Apr/2026 08:59:01] "POST /predict HTTP/1.1" 200 -
+2026-04-16 14:05:31,462 [INFO] __main__: MobileNetV2 loaded — ready for inference
+2026-04-16 14:05:31,463 [INFO] __main__: Starting on port 5000 (debug=True)
+2026-04-16 14:06:34,839 [INFO] __main__: MobileNetV2 loaded — ready for inference
+2026-04-16 14:06:34,840 [INFO] __main__: Starting on port 8080 (debug=True)
+2026-04-16 14:06:34,908 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.0.0.2:8080
+2026-04-16 14:06:34,908 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-04-16 14:06:34,909 [INFO] werkzeug:  * Restarting with stat
+2026-04-16 14:06:37,637 [INFO] __main__: MobileNetV2 loaded — ready for inference
+2026-04-16 14:06:37,638 [INFO] __main__: Starting on port 8080 (debug=True)
+2026-04-16 14:06:37,662 [WARNING] werkzeug:  * Debugger is active!
+2026-04-16 14:06:37,679 [INFO] werkzeug:  * Debugger PIN: 139-019-836
+2026-04-16 14:06:38,163 [INFO] werkzeug: 127.0.0.1 - - [16/Apr/2026 14:06:38] "GET / HTTP/1.1" 200 -
+2026-04-16 14:06:39,751 [INFO] werkzeug: 127.0.0.1 - - [16/Apr/2026 14:06:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-16 14:08:13,758 [INFO] __main__: Preprocessed 'images.jpeg' → shape (1, 224, 224, 3)
+2026-04-16 14:08:14,375 [INFO] __main__: Prediction: Egyptian Cat (43.4%) | File: 'images.jpeg'
+2026-04-16 14:08:14,376 [INFO] werkzeug: 127.0.0.1 - - [16/Apr/2026 14:08:14] "POST /predict HTTP/1.1" 200 -
+2026-04-16 14:41:54,320 [INFO] __main__: Preprocessed 'download.jpeg' → shape (1, 224, 224, 3)
+2026-04-16 14:41:54,506 [INFO] __main__: Prediction: Egyptian Cat (77.2%) | File: 'download.jpeg'
+2026-04-16 14:41:54,507 [INFO] werkzeug: 127.0.0.1 - - [16/Apr/2026 14:41:54] "POST /predict HTTP/1.1" 200 -
+2026-04-16 14:42:28,000 [INFO] __main__: Preprocessed 'images.webp' → shape (1, 224, 224, 3)
+2026-04-16 14:42:28,159 [INFO] __main__: Prediction: Saluki (35.0%) | File: 'images.webp'
+2026-04-16 14:42:28,159 [INFO] werkzeug: 127.0.0.1 - - [16/Apr/2026 14:42:28] "POST /predict HTTP/1.1" 200 -
+2026-04-17 07:41:11,906 [INFO] __main__: MobileNetV2 loaded — ready for inference
+2026-04-17 07:41:11,907 [INFO] __main__: Starting on port 8080 (debug=True)
+2026-04-17 07:41:11,953 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080
+2026-04-17 07:41:11,953 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-04-17 07:41:11,953 [INFO] werkzeug:  * Restarting with stat
+2026-04-17 07:41:15,268 [INFO] __main__: MobileNetV2 loaded — ready for inference
+2026-04-17 07:41:15,268 [INFO] __main__: Starting on port 8080 (debug=True)
+2026-04-17 07:41:15,289 [WARNING] werkzeug:  * Debugger is active!
+2026-04-17 07:41:15,332 [INFO] werkzeug:  * Debugger PIN: 139-019-836
+2026-04-17 07:41:15,399 [INFO] werkzeug: 127.0.0.1 - - [17/Apr/2026 07:41:15] "GET / HTTP/1.1" 200 -
+2026-04-17 07:41:50,494 [INFO] __main__: Preprocessed 'image.jpeg' → shape (1, 224, 224, 3)
+2026-04-17 07:41:51,149 [INFO] __main__: Prediction: Saluki (44.1%) | File: 'image.jpeg'
+2026-04-17 07:41:51,150 [INFO] werkzeug: 127.0.0.1 - - [17/Apr/2026 07:41:51] "POST /predict HTTP/1.1" 200 -
+2026-04-17 07:42:00,126 [INFO] __main__: Preprocessed 'image.jpeg' → shape (1, 224, 224, 3)
+2026-04-17 07:42:00,216 [INFO] __main__: Prediction: German Shepherd (70.1%) | File: 'image.jpeg'
+2026-04-17 07:42:00,216 [INFO] werkzeug: 127.0.0.1 - - [17/Apr/2026 07:42:00] "POST /predict HTTP/1.1" 200 -
